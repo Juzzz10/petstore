@@ -1,0 +1,66 @@
+:root {
+  --font-family: system-ui, sans-serif;
+  --font-size: 1rem;
+  --label-size: 0.85rem;
+  --text-color: #2c3e50;
+  --label-color: #6c757d;
+  --input-bg: #ffffff;
+  --input-radius: 6px;
+  --input-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  --focus-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+}
+
+body {
+  font-family: var(--font-family);
+  font-size: var(--font-size);
+  color: var(--text-color);
+  margin: 0;
+  padding: 40px;
+  background-color: #f9fbfc;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+form {
+  width: 100%;
+  max-width: 600px;
+}
+
+.form-group {
+  position: relative;
+  margin-bottom: 28px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 12px 14px;
+  font-size: var(--font-size);
+  border: none;
+  border-radius: var(--input-radius);
+  background-color: var(--input-bg);
+  box-shadow: var(--input-shadow);
+  box-sizing: border-box;
+  transition: box-shadow 0.2s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  box-shadow: var(--focus-shadow);
+}
+
+.form-group label {
+  position: absolute;
+  bottom: -18px;
+  left: 0;
+  font-size: var(--label-size);
+  color: var(--label-color);
+  pointer-events: none;
+  transition: color 0.2s ease;
+}
